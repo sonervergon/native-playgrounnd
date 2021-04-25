@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   View as V,
   Text as T,
@@ -56,7 +55,6 @@ export const Image = styled<ImageProps>(I);
 const SafeAreaStyles = StyleSheet.create({
   AndroidSafeArea: {
     flex: 1,
-    paddingHorizontal: 4,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });

@@ -24,6 +24,7 @@ module.exports = function (api) {
                 "@base/components": "./base/components/",
                 "@base/ui": "./base/ui/",
                 "@base/tw": "./base/style/",
+                "@base/emotion": "./base/emotion/",
                 src: "./src/",
                 icons: "./icons/",
               },

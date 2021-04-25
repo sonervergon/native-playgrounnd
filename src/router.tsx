@@ -7,7 +7,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home as HomeIcon, Cog } from "icons";
 import * as Home from "./pages/home";
-import * as Options from "./pages/options";
+import * as Emotion from "./pages/emotion";
 import { Text } from "@base/components";
 import { color } from "@base/tw";
 
@@ -28,10 +28,10 @@ const App = () => {
 
 const ICON_MAP = {
   App: HomeIcon,
-  Options: Cog,
+  Emotion: Cog,
 };
 
-type Routes = "App" | "Options";
+type Routes = "App" | "Emotion";
 
 export function Router() {
   return (
@@ -55,8 +55,7 @@ export function Router() {
         })}
         tabBarOptions={{
           inactiveTintColor: color("gray-400"),
-          activeBackgroundColor:
-            Platform.OS === "ios" ? undefined : color("gray-100"),
+          activeBackgroundColor: undefined,
           activeTintColor: color("gray-900"),
           style: {
             height: Platform.OS === "ios" ? 90 : 60,
@@ -65,7 +64,7 @@ export function Router() {
         }}
       >
         <Root.Screen name="App" component={App} />
-        <Root.Screen name="Options" component={Options.Component} />
+        <Root.Screen name="Emotion" component={Emotion.Component} />
       </Root.Navigator>
     </NavigationContainer>
   );

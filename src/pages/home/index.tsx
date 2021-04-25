@@ -57,7 +57,7 @@ const Item = () => {
         <View>
           <Image
             resizeMode="cover"
-            className="rounded-t-xl h-44 "
+            className="rounded-t-xl h-44"
             source={{
               uri: "https://source.unsplash.com/random",
             }}
@@ -109,7 +109,7 @@ const Index = () => {
     setTimeout(() => setRefreshing(false), 2000);
   }, []);
   return (
-    <SafeArea className="flex-1 bg-gray-50 pt-6">
+    <SafeArea className="flex-1 pt-6">
       <ScrollView
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={handle} />
